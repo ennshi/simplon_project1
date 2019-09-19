@@ -39,7 +39,7 @@
                     <img class="img-fluid" src="img/logo.png" alt="Logo">
                 </div>
                 <div class="col-12 col-sm-5 ml-auto align-self-center">
-                    <a class="btn btn-lg" id="resBtn" href="#" role="button">Reservez-vous</a>
+                    <a class="btn btn-lg" id="resBtn" href="#" role="button">Reservez une table</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-4">
-                <img src="img/chef.jpg" class="d-block img-fluid" alt="Le Chef">
+                <img src="img/chef.jpg" id="chef-photo" class="d-block img-fluid" alt="Le Chef">
             </div> 
             <div class="col-12 col-sm">
                 <h2>Le Chef</h2>
@@ -71,7 +71,7 @@
             </div>
         
             <div class="row d-flex justify-content-around">
-                <div class="col-sm-3">
+                <div class="col-8 col-md-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_1.jpg" alt="Card image cap">
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-8 col-md-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_2.jpg" alt="Card image cap">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-8 col-md-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_3.jpg" alt="Card image cap">
@@ -113,57 +113,52 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row col-12 col-sm-8 offset-2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card">
-                            <div class="card-body">
-                              <blockquote class="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone<cite title="Source Title">Source Title</cite></footer>
-                              </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <div class="card-body">
-                              <blockquote class="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card">
-                            <div class="card-body">
-                              <blockquote class="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </blockquote>
-                            </div>
+    
+    <div class="container avis-container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card">
+                        <div class="card-body avis-body">
+                            <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone<cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="carousel-item">
+                    <div class="card">
+                        <div class="card-body avis-body">
+                            <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <div class="card-body avis-body">
+                            <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> 
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Dernier</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Prochain</span>
+            </a>
+        </div>
     </div>
+
     <div id="contact-container">
         <div class="container">
             <div class="row">
