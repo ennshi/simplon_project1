@@ -1,24 +1,63 @@
+@font-face {
+  font-family: 'Kabel Book BT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Kabel Book BT'), url('../fonts/Kabel Book BT_0.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'joannaregular';
+  src: url('../fonts/unicode.joanna-webfont.woff2') format('woff2'),
+       url('../fonts/unicode.joanna-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'joannaregular';
+  font-size: 1.1em;
+}
+
 body {
-    padding: 50px 0px 0px 0px;
-    z-index: 0; 
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Kabel Book BT';
 }
 
-/*
-flip card
-*/
+.navbar-light {
+  background-color: #e1e5e5;
+  font-family: 'Kabel Book BT';
+  font-size: 1.2em !important;
+}
+.top-nav-link {
+  color:   #424d50 !important;
+}
+.top-nav-link:hover {
+  color: #caa691 !important;
+}
+
+.jumbotron {
+  background: url('../img/background.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+  height: 20rem;
+}
+
 .card {
-    border: none;
-
+  border: none;
 }
+
 .card-flip > div {
-    backface-visibility: hidden;
-    transition: transform 300ms;
-    transition-timing-function: linear;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-  }
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
   
   .card-front {
     transform: rotateY(0deg);
@@ -37,4 +76,21 @@ flip card
   .card-flip:hover .card-back {
     transform: rotateY(0deg);
   }
+
+#contact-container {
+  background: url('../img/contact.jpg') repeat center/cover;
+  width: 100%;
+  padding: 3%;
+  font-size: 1.1em;
   
+}
+.footer {
+  background-color: #424d50;
+  padding: 1%;
+}
+.btn-social-icon {
+  color: #caa691;
+}
+.btn-social-icon:hover {
+  color: #e1e5e5;
+}
