@@ -44,9 +44,34 @@ h1, h2, h3, h4, h5 {
   background-attachment: fixed;
   height: 20rem;
 }
+#resBtn {
+  border-radius: 0 !important;
+  background-color: #ffffff;
+  font-family: 'Kabel Book BT';
+  font-weight: bold;
+  color:   #424d50;
+  border: 3px solid #424d50;
+}
+#resBtn:hover {
+  background-color: #c4e8e1;
+}
 
+.plates-container {
+  background-image: url('../img/plates.jpg');
+  background-size: contain;
+  margin-top: 3%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  
+}
+.plates-container-inner {
+  color: #424d50 !important;
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
 .card {
   border: none;
+  margin-top: 3%;
 }
 
 .card-flip > div {
@@ -67,6 +92,8 @@ h1, h2, h3, h4, h5 {
     transform: rotateY(180deg);
     position: absolute;
     top: 0;
+    background-color: #e1e5e5;
+    color: #424d50;
   }
   
   .card-flip:hover .card-front {
