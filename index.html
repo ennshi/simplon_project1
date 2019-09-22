@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -98,6 +101,14 @@
             </div>
         </div>
     </div>
+
+    <div id="carteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <img class="img-fluid" src="img/carte.jpg" alt="la carte">
+            </div>
+        </div>
+    </div>
     
     <header class="jumbotron" id="accueil">
         <div class="container">
@@ -168,7 +179,7 @@
                         </div>
                         <div class="card-back">
                             <div class="card-body">
-                                <h3 class="card-title">Salade poulet avocat</h3>
+                                <h4 class="card-title">Salade poulet avocat</h4>
                                 <p class="card-text">(poulet, avocat, oignon, salade mixte)</p>
                             </div>
                         </div>
@@ -181,7 +192,7 @@
                         </div>
                         <div class="card-back">
                             <div class="card-body">
-                                <h3 class="card-title">Galette aux courgettes</h3>
+                                <h4 class="card-title">Galette aux courgettes</h4>
                                 <p class="card-text">(galette de sarrasin, courgette, oeuf, emmental)</p>
                             </div>
                         </div>
@@ -194,12 +205,16 @@
                         </div>
                         <div class="card-back">
                             <div class="card-body">
-                                <h3 class="card-title">Cr&ecirc;pe &aacute; la banane flamb&eacute;e</h3>
+                                <h4 class="card-title">Cr&ecirc;pe &aacute; la banane flamb&eacute;e</h4>
                                 <p class="card-text">(cr&ecirc;pe, banane, sucre, orange, rhum)</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row justify-content-center mt-3 mt-md-5">
+                <a class="btn btn-light" id="carteBtn" href="#" role="button" data-toggle="modal" data-target="#carteModal">Notre Carte</a>
             </div>
         </div>
     </div>
@@ -277,15 +292,16 @@
     <footer class="footer">
         <div class="container">
             <div class="row">             
-                <div class="navbar navbar-dark navbar-expand-sm col-sm-8">
+                <div class="navbar navbar-dark navbar-expand-sm col-md-8">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#accueil">CHEF</a></li>
                         <li class="nav-item"><a class="nav-link" href="#menu">MENU </a></li>
                         <li class="nav-item"><a class="nav-link" href="#commentaires">COMMENTAIRES </a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#resModal">RESERVER UNE TABLE</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-sm-4 align-self-center">
+                <div class="col-12 col-md-4 align-self-center">
                     <div class="text-center">
                         <a class="btn btn-social-icon btn-instagram" href="http://google.com/+"><i class="fa fa-instagram fa-lg"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
@@ -293,11 +309,11 @@
                     </div>
                 </div>
             </div>
-               <div class="row justify-content-center">             
-                    <div class="col-auto">
-                        <p>© Copyright 2019 marie et th&eacute;o</p>
-                    </div>
-               </div>
+
+            <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2019 marie et th&eacute;o</p>
+                </div>
             </div>
         </div>
     </footer>
