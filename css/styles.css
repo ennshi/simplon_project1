@@ -103,7 +103,6 @@ h1, h2, h3, h4, h5 {
       border-radius: 0 !important;
       font-family: 'Kabel Book BT';
       font-size: 1.1em;
-      
     }
 
     #sbmtBtn:hover {
@@ -223,9 +222,15 @@ h1, h2, h3, h4, h5 {
     color: #e1e5e5;
   }
 
-  @media screen and (max-width: 1000px) {
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-      height: 50%;
-      width: 50%;
-    }
+@media screen and (max-width: 800px) {
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50%;
+    width: 50%;
   }
+}
+
+@media screen and (min-width: 600px) {
+  .content-photo {
+    margin-top: 1rem;
+  }
+}
