@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <title>marie et theo</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".fixed-top" data-offset="200">
     <nav class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -21,11 +22,11 @@
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link top-nav-link" href="#">accueil</a></li>
-                    <li class="nav-item"><a class="nav-link top-nav-link" href="#">chef</a></li>
-                    <li class="nav-item"><a class="nav-link top-nav-link" href="#">menu</a></li>
-                    <li class="nav-item"><a class="nav-link top-nav-link" href="#">commentaires</a></li>
-                    <li class="nav-item"><a class="nav-link top-nav-link" href="#">contact</a></li>
+                    <li class="nav-item"><a class="nav-link top-nav-link active" href="#accueil">accueil</a></li>
+                    <li class="nav-item"><a class="nav-link top-nav-link" href="#chef">chef</a></li>
+                    <li class="nav-item"><a class="nav-link top-nav-link" href="#menu">menu</a></li>
+                    <li class="nav-item"><a class="nav-link top-nav-link" href="#commentaires">commentaires</a></li>
+                    <li class="nav-item"><a class="nav-link top-nav-link" href="#contact">contact</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +53,7 @@
                                 <label for="phone" class="col-12 col-md-2 col-form-label">Tel.</label>
                             </div>
                             <div class="col-6 col-md-6">
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Tel.">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -83,13 +84,13 @@
                                 <label for="timeReg" class="col-12 col-md-2 col-form-label">Time</label>
                             </div>
                             <div class="col-8 col-md-6">
-                                <input type="time" class="form-control" id="timeReg" name="timereg" placeholder="Time">
+                                <input id="timeFormat" type="time" class="form-control" id="timeReg" name="timereg" placeholder="Time">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="offset-2 col-10 offset-md-3 col-md-9 justify-content-center">
-                                <button type="submit" class="btn" id="sbmtBtn">Reserver</button>
-                                <button type="button" class="btn" id="resCancelBtn" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-light" id="sbmtBtn">Reserver</button>
+                                <button type="button" class="btn btn-light" id="resCancelBtn" data-dismiss="modal">Annuler</button>
                             </div>
                         </div>
                     </form>
@@ -98,32 +99,45 @@
         </div>
     </div>
     
-    <header class="jumbotron">
+    <header class="jumbotron" id="accueil">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-5 align-self-center">
                     <img class="img-fluid" src="img/logo.png" alt="Logo">
                 </div>
                 <div class="col-12 col-sm-5 ml-auto align-self-center">
-                    <a class="btn btn-lg" id="resBtn" href="#" role="button" data-toggle="modal" data-target="#resModal">Reservez une table</a>
+                    <a class="btn btn-light" id="resBtn" href="#" role="button" data-toggle="modal" data-target="#resModal">Reservez une table</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <img src="img/chef.jpg" id="chef-photo" class="d-block img-fluid" alt="Le Chef">
-            </div> 
+    <div class="container-up">
+        <div class="container">
+            <div class="row content content-up">
+                <div class="col-12 col-sm-5 order-12 order-sm-1">
+                    <img src="img/accueil.jpg" class="d-block img-fluid content-photo" alt="Le Chef">
+                </div> 
+                <div class="col-12 col-sm-7 order-6">
+                    <h2>Notre Creperie</h2>
+                    <p>The best creperieeee e eeeeeeeeeeee e   eeeee</p>
+                    <p class="d-none d-sm-block">Extra descriptioooooooooooooooooon nnnnnn nnnnnnn nnnnnnn</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="chef">
+        <div class="row content content-down">
             <div class="col-12 col-sm">
                 <h2>Le Chef</h2>
                 <p>The best cheffffffffffffffffff fffffffff vfffffffffff ffffffffffffff</p>
                 <p class="d-none d-sm-block">Extra descriptioooooooooooooooooon nnnnnn nnnnnnn nnnnnnn</p> 
             </div>
+            <div class="col-12 col-sm-5">
+                <img src="img/chef.jpg" class="d-block img-fluid content-photo" alt="Le Chef">
+            </div> 
         </div>
     </div>
-    <div class="plates-container">
+    <div class="plates-container" id="menu">
         <div class="container plates-container-inner bg-white">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
@@ -136,7 +150,7 @@
             </div>
         
             <div class="row d-flex justify-content-around">
-                <div class="col-8 col-md-3">
+                <div class="col-10 col-md-6 col-lg-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_1.jpg" alt="Card image cap">
@@ -149,7 +163,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-md-3">
+                <div class="col-10 col-md-6 col-lg-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_2.jpg" alt="Card image cap">
@@ -162,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 col-md-3">
+                <div class="col-10 col-md-6 col-lg-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_3.jpg" alt="Card image cap">
@@ -178,7 +192,7 @@
             </div>
         </div>
     </div>
-    
+    <div id="commentaires"></div>
     <div class="container avis-container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
@@ -225,7 +239,7 @@
     </div>
 
     <div id="contact-container">
-        <div class="container">
+        <div class="container" id="contact">
             <div class="row">
                 <div class="col-12 col-sm-4 mr-auto">
                     <img src="img/logo_1.png" alt="Logo" class="img-fluid">
@@ -250,10 +264,10 @@
             <div class="row">             
                 <div class="navbar navbar-dark navbar-expand-sm col-sm-8">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">CHEF |&nbsp;</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">MENU |&nbsp; </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">COMMENTAIRES |&nbsp; </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#accueil">CHEF |&nbsp;</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">MENU |&nbsp; </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#commentaires">COMMENTAIRES |&nbsp; </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
@@ -276,6 +290,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
