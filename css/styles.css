@@ -68,9 +68,9 @@ h1, h2, h3, h4, h5 {
       background: white;
     }
 
-#resBtn, #carteBtn {
+#resBtn, #carteBtn, #comBtn {
   border-radius: 0 !important;
-  background-color: #eff2f6;
+  background-color: white;
   font-family: 'Kabel Book BT';
   font-size: 1.2em;
   color: #747d80;
@@ -78,11 +78,23 @@ h1, h2, h3, h4, h5 {
   padding: 12px 20px;
   margin-left: 15px;
 }
-#resBtn:hover, #carteBtn:hover {
+
+#resBtn:hover  {
   background-color: #747d80;
   color: #e1e5e5;
   border-color: #e1e5e5;
 }
+
+#carteBtn:hover {
+  color: #424d50;
+  border-color: #424d50;
+}
+
+#comBtn:hover {
+  color: #caa691;
+  border-color: #caa691;
+}
+
 .modal-open[style] {
   position: fixed;
   overflow: scroll;
@@ -116,13 +128,18 @@ h1, h2, h3, h4, h5 {
       border-color: #caa691;
       color: #caa691;
     }
+
     .close {
       color: #e1e5e5; 
     }
+
     .close:hover {
       color: white; 
     }
-
+    
+    textarea {
+      width: 100%;
+    }
 
 .content-photo {
   max-height: 50vh;

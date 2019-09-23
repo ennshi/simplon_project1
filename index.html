@@ -38,56 +38,49 @@
         <div class="modal-dialog modal-md" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">R&eacute;servez une table</h4>
+                    <h4 class="modal-title ml-auto">R&eacute;servez une table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group row">
-                            <div class="col-6 col-md-3 col-form-label">
-                                <label for="prenom" class="col-12 col-md-2 col-form-label">Pr&eacute;nom</label>
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="prenom" class="col-form-label">Pr&eacute;nom</label>
                             </div>
-                            <div class="col-6 col-md-6">
+                            <div class="col-8">
                                 <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Pr&eacute;nom">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-6 col-md-3 col-form-label">
-                                <label for="phone" class="col-12 col-md-2 col-form-label">Tel.</label>
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="nom" class="col-form-label">Nom</label>
                             </div>
-                            <div class="col-6 col-md-6">
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="0XXXXXXXXX" pattern>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6 col-md-3 col-form-label">
-                                <label for="numguests">Combien de personne(s)</label>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <select class="form-control" id="numguests">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                </select>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-4 col-md-3 col-form-label">
-                                <label for="dateReg" class="col-12 col-md-2 col-form-label">Date</label>
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="phone" class="col-form-label">Tel.</label>
                             </div>
-                            <div class="col-8 col-md-6">
-                                <input type="date" class="form-control" id="dateReg" name="datereg" placeholder="Date">
+                            <div class="col-8">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="0XXXXXXXXX">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-4 col-md-3 col-form-label">
-                                <label for="timeReg" class="col-12 col-md-2 col-form-label">Heure</label>
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="email" class="col-form-label">Email</label>
                             </div>
-                            <div class="col-8 col-md-6">
-                                <input id="timeFormat" type="time" class="form-control" id="timeReg" name="timereg" placeholder="Heure">
+                            <div class="col-8">
+                                <input type="email" class="form-control" id="mail" name="mail" placeholder="aaa@x.xx">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="adresse" class="col-form-label">Adresse</label>
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="adresse" name="adresse" placeholder="Pays, Ville, Code, Rue..."></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -106,6 +99,51 @@
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <img class="img-fluid" src="img/carte.jpg" alt="la carte">
+            </div>
+        </div>
+    </div>
+
+    <div id="comModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ml-auto">Ajoutez votre commentaire</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="prenom" class="col-form-label">Pr&eacute;nom</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Pr&eacute;nom">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="email" class="col-form-label">Email</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="email" class="form-control" id="mail" name="mail" placeholder="aaa@x.xx">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="comment" class="col-form-label">Commentaire</label>
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="comment" name="comment" placeholder="Votre commentaire"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-2 col-10 offset-md-3 col-md-9 justify-content-center">
+                                <button type="submit" class="btn btn-light" id="sbmtBtn">Soumettre</button>
+                                <button type="button" class="btn btn-light" id="resCancelBtn" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -267,6 +305,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Prochain</span>
             </a>
+        </div>
+        <div class="row justify-content-center mb-4">
+            <a class="btn btn-light" id="comBtn" href="#" role="button" data-toggle="modal" data-target="#comModal">Ajoutez votre commentaire</a>
         </div>
     </div>
 
