@@ -1,3 +1,8 @@
+<?php 
+    require_once 'php/init.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,6 +18,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     
     <title>marie et theo</title>
 </head>
@@ -85,7 +91,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-2 col-10 offset-md-3 col-md-9 justify-content-center">
-                                <button type="submit" class="btn btn-light" id="sbmtBtn">R&eacute;server</button>
+                                <button type="button" class="btn btn-light" id="sbmtBtn">R&eacute;server</button>
                                 <button type="button" class="btn btn-light" id="resCancelBtn" data-dismiss="modal">Annuler</button>
                             </div>
                         </div>
@@ -114,18 +120,18 @@
                     <form>
                         <div class="form-group row">
                             <div class="col-4 col-md-3 col-form-label ml-auto">
-                                <label for="prenom" class="col-form-label">Pr&eacute;nom</label>
+                                <label for="prenom_com" class="col-form-label">Pr&eacute;nom</label>
                             </div>
                             <div class="col-8">
-                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Pr&eacute;nom">
+                                <input type="text" class="form-control" id="prenom_com" name="prenom" placeholder="Pr&eacute;nom">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-4 col-md-3 col-form-label ml-auto">
-                                <label for="email" class="col-form-label">Email</label>
+                                <label for="mail_com" class="col-form-label">Email</label>
                             </div>
                             <div class="col-8">
-                                <input type="email" class="form-control" id="mail" name="mail" placeholder="aaa@x.xx">
+                                <input type="email" class="form-control" id="mail_com" name="mail" placeholder="aaa@x.xx">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -361,7 +367,7 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
