@@ -13,24 +13,15 @@
                 'min' => 2,
                 'max' => 50
             ),
-            'nom' => array(
-                'name' => 'Le nom',
-                'letters' =>true,
-                'min' => 2,
-                'max' => 50
-            ),
             'email' => array(
                 'name' => 'L\'adresse email',
                 'required' => true,
                 'email_filter' => true
             ),
-            'phone' => array(
-                'name' =>'Le numero',
-                'numtel' => true
-            ),
-            'adresse' => array(
-                'name' =>'L\'adresse',
-                'min' => 5,
+            'comment' => array(
+                'name' =>'Le commentaire',
+                'required' => true,
+                'min' => 2,
                 'max' => 120
             )
         ));
@@ -38,21 +29,18 @@
             $user = new User();
 
             $prenom = htmlentities(trim($_POST['prenom']));
-            $nom = htmlentities(trim($_POST['nom']));
             $email = htmlentities(trim($_POST['email']));
-            $phone = htmlentities($_POST['phone']);
-            $adresse = htmlentities(trim($_POST['adresse']));
+            $comment = htmlentities(trim($_POST['comment']));
             
-            $user -> ajouter('users', array(
+            $user -> ajouter('comments', array(
                 'prenom' => $prenom,
-                'nom' => $nom,
                 'email' => $email,
-                'phone' => $phone,
-                'adresse' => $adresse,
-                'date' => date('Y-m-d H:i:s')
+                'comment' => $comment,
+                'date' => date('Y-m-d H:i:s'),
+                'accepte' => 0
             ));
 
-            $msg = "Merci, {$prenom}. Nous vous recontacterons!";
+            $msg = "Merci, {$prenom}, pour votre commentaire!";
 
         } else {
             $msg = implode(' ', $validation->errors());

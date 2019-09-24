@@ -144,8 +144,8 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-2 col-10 offset-md-3 col-md-9 justify-content-center">
-                                <button type="submit" class="btn btn-light" id="sbmtBtn">Soumettre</button>
-                                <button type="button" class="btn btn-light" id="resCancelBtn" data-dismiss="modal">Annuler</button>
+                                <button type="button" class="btn btn-light" id="sendBtn">Soumettre</button>
+                                <button type="button" class="btn btn-light" id="comCancelBtn" data-dismiss="modal">Annuler</button>
                             </div>
                         </div>
                     </form>

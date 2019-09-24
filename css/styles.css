@@ -112,23 +112,23 @@ h1, h2, h3, h4, h5 {
     background: #e1e5e5; 
   }
 
-    #sbmtBtn, #resCancelBtn {
+    #sbmtBtn, #resCancelBtn, #sendBtn, #comCancelBtn {
       border: 3px solid #747d80;
       border-radius: 0 !important;
       font-family: 'Kabel Book BT';
       font-size: 1.1em;
     }
 
-    #comBtn, #sbmtBtn {
+    #comBtn, #sbmtBtn, #sendBtn {
       margin-right: 1.5rem;
     }
 
-    #sbmtBtn:hover {
+    #sbmtBtn:hover, #sendBtn:hover {
       border-color: #ffffff;
       color: white;
     }
 
-    #resCancelBtn:hover {
+    #resCancelBtn:hover, #comCancelBtn:hover {
       border-color: #caa691;
       color: #caa691;
     }
