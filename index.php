@@ -51,7 +51,7 @@
                     <form>
                         <div class="form-group row">
                             <div class="col-4 col-md-3 col-form-label ml-auto">
-                                <label for="prenom" class="col-form-label">Pr&eacute;nom</label>
+                                <label for="prenom" class="col-form-label">Pr&eacute;nom*</label>
                             </div>
                             <div class="col-8">
                                 <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Pr&eacute;nom">
@@ -75,7 +75,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-4 col-md-3 col-form-label ml-auto">
-                                <label for="email" class="col-form-label">Email</label>
+                                <label for="email" class="col-form-label">Email*</label>
                             </div>
                             <div class="col-8">
                                 <input type="email" class="form-control" id="mail" name="mail" placeholder="aaa@x.xx">
