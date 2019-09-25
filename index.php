@@ -1,7 +1,7 @@
 <?php 
     require_once 'php/init.php';
     require_once 'php/content_comments.php';
-    
+    require_once 'php/content_plats.php';
 
 ?>
 
@@ -212,8 +212,20 @@
                     <h2>Plats de la semaine</h2>
                 </div>
 
-                <div class="col-12 d-flex justify-content-end">
-                    <h3>jj/mm/yyyy</h3>
+                <div class="col-12 d-flex justify-content-center">
+                    <form>
+                        <select class="form-control mb-4 mt-2" name="date_plats" id="date_plats">
+                            
+                            <?php foreach($dates as $date) {
+
+                                $sqldate = strtotime($date->date);
+                                $realdate = date( 'd-m-Y', $sqldate );
+
+                                echo "<option value='{$realdate}'>{$realdate}</option>";
+                            } ?>
+
+                        </select>
+                    </form>
                 </div>
             </div>
         

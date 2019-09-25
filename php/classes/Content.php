@@ -22,7 +22,15 @@ class Content {
         $this->_data = $check;
         return $this->_data;
     }
-    
+
+    public function select_dvalues ($table, $field){
+        $stmt = $this->_conn->conn->prepare("SELECT DISTINCT `{$field}` FROM `{$table}` ORDER BY `{$field}` DESC");
+        $stmt->execute(array($value));
+        $check = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $this->_data = $check;
+        return $this->_data;
+    }
+
     public function show(){
         return $this->_data;
     }
