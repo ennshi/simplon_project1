@@ -1,5 +1,7 @@
 <?php 
     require_once 'php/init.php';
+    require_once 'php/content_comments.php';
+    
 
 ?>
 
@@ -268,40 +270,26 @@
     <div class="container avis-container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card">
-                        <div class="card-body avis-body">
-                            <blockquote class="blockquote mb-0">
-                            <p>En étant bretons, nous avons trouvé cette crêperie très très bonne! Bon accueil, ambiance chaleureuse! Le service est rapide : 
-                                convient parfaitement pour les personnes ayant peu de temps le midi! 
-                                D’autant plus qu’il y a un menu du midi avec une bolée de cidre, une galette et une crêpe à seulement 12€ : c’est très valable!</p>
-                            <footer class="blockquote-footer">Simon et Elodie <cite title="Source Title">25/09/2019</cite></footer>
-                            </blockquote>
+                <?php $i = 0; foreach($comments as $comment) {
+                    if($i == 0){
+                        echo "<div class='carousel-item active'>"; 
+                    } else {
+                        echo "<div class='carousel-item'>";
+                    } 
+                    echo "<div class='card'>
+                            <div class='card-body avis-body'>
+                                <blockquote class='blockquote mb-0'>
+                                    <p>{$comment->comment}</p>
+                                    <footer class='blockquote-footer'>
+                                        {$comment->prenom} 
+                                        <cite title='Source Title'>{$comment->date}</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card">
-                        <div class="card-body avis-body">
-                            <blockquote class="blockquote mb-0">
-                            <p>Les galettes et crêpes sont gourmandes et bien assaisonnées. Même nature, elles ont très bon goût. 
-                                Le rapport qualité prix est raisonnable et le service au top. A refaire sans hésiter !!</p>
-                            <footer class="blockquote-footer">Aurelia <cite title="Source Title">19/06/2019</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card">
-                        <div class="card-body avis-body">
-                            <blockquote class="blockquote mb-0">
-                            <p>Cette crêperie est excellente vous pouvez vous y rendre les yeux fermés.
-                                Pensez à réserver les places y sont chères contrairement à l’addition.</p>
-                            <footer class="blockquote-footer">Michel <cite title="Source Title">10/04/2019</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
+                    </div>";
+                    $i++;
+                }?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
