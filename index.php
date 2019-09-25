@@ -176,31 +176,18 @@
                 <div class="col-12 col-sm-5 order-12 order-sm-1">
                     <img src="img/accueil.jpg" class="d-block img-fluid content-photo" alt="Le Chef">
                 </div> 
-                <div class="col-12 col-sm-7 order-6">
+                <div class="col-12 col-sm-7 order-6" id="creperie_text">
                     <h2>Notre Cr&ecirc;perie</h2>
-                    <p>Depuis janvier 2012, Marie et Théo Leroy les propriétaires de la crêperie, où vous régale de des nombreuses préparations maisons. 
-                        Outre les pâtes à crêpes et galettes préparées chaque jour, vous pourrez apprécier la sauce chocolat, le caramel beurre salé, la crème de marron, 
-                        les confitures, la confiture cheveux d'ange, les tomates séchées marinées, les petites salades et leur vinaigrette au miel et au vinaigre de 
-                        cidre maison, les madeleines de sarrasin, le thé glacé, les crèmes de fruits pour les kirs, les chutneys et autres préparations du jour.</p>
-                    <p class="d-none d-sm-block">Les cidres viennent de deux petits producteurs indépendants. Le miel provient d'un apiculteur de Seine et Marne et 
-                        les légumes d'un petit primeur indépendant.
-                        Chez 'marie et théo', pas de micro ondes, pas de congélateur ni de boîtes de conserve. 
-                        Du frais, du fait maison, le tout servi avec beaucoup d'amour et de sourires.</p> 
+                     
                 </div>
             </div>
         </div>
     </div>
     <div class="container" id="chef">
         <div class="row content content-down">
-            <div class="col-12 col-sm">
+            <div class="col-12 col-sm" id="chef_text">
                 <h2>Le Chef</h2>
-                <p>Théo Leroy est maître crêpier français, formé en Bretagne. Il s`attache à préparer des plats toujours plus originaux. 
-                    Chaque semaine, il vous proposons un nouveaux plqt que vous pourrez découvrir sur ce site! Et bien sûr, vous pouvez choisir nos recettes traditionnelles, toujours très demandées. 
-                    Pour en savoir plus sur les plats, consultez les plats à la carte et les menus de la crêperie.</p>
-                <p class="d-none d-sm-block">Côté recettes, Théо n’a pas fini de vous surprendre avec des propositions qui se renouvellent régulièrement.  
-                    Vous n’imaginerez pas jusqu’à quel point la crêpe et la galette peuvent se décliner… Complète pour les puristes, garnie de poêlée de Saint-Jacques sauce
-                    cognac aux amandes pour les palais les plus fins, de la crêpe la plus traditionnelle à la plus exotique ou raffinée, il y en a pour tous les goûts et 
-                    toutes les envies !</p> 
+                
             </div>
             <div class="col-12 col-sm-5">
                 <img src="img/chef.jpg" class="d-block img-fluid content-photo" alt="Le Chef">
@@ -233,47 +220,7 @@
         
             <div class="row d-flex justify-content-around" id="plats_date">
                 
-               <!-- <div class="col-10 col-md-6 col-lg-3">
-                    <div class="card card-flip">
-                        <div class="card-front">
-                            <img class="card-img" src="img/salade_2.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-back">
-                            <div class="card-body">
-                                <h4 class="card-title">Salade poulet avocat</h4>
-                                <p class="card-text">(poulet, avocat, oignon, salade mixte)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 col-md-6 col-lg-3">
-                    <div class="card card-flip">
-                        <div class="card-front">
-                            <img class="card-img" src="img/galette_1.jpg" alt="Galette aux courgettes">
-                        </div>
-                        <div class="card-back">
-                            <div class="card-body">
-                                <h4 class="card-title">Galette aux courgettes</h4>
-                                <p class="card-text">(galette de sarrasin, courgette, oeuf, emmental)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="badge badge-success mt-1"><i class="fa fa-leaf fa-2x"></i></span>
-                </div>
-                <div class="col-10 col-md-6 col-lg-3">
-                    <div class="card card-flip">
-                        <div class="card-front">
-                            <img class="card-img" src="img/crepe_1.jpg" alt="Card image cap">
-                        </div>
-                        <div class="card-back">
-                            <div class="card-body">
-                                <h4 class="card-title">Cr&ecirc;pe &aacute; la banane flamb&eacute;e</h4>
-                                <p class="card-text">(cr&ecirc;pe, banane, sucre, orange, rhum)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="badge badge-success mt-1"><i class="fa fa-leaf fa-2x"></i></span>
-                </div> -->
+              
             </div>
 
             <div class="row justify-content-center mt-3 mt-md-5">
@@ -326,11 +273,8 @@
                 <div class="col-12 col-sm-4 mr-auto">
                     <img src="img/logo_1.png" alt="Logo" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm-4">
-                    <p>151 Place Royale<br/>
-                    64000 Pau<br/>
-                    Tel. : +33 0 00 00 00 00<br/>
-                    info@marieettheo.fr</p>
+                <div class="col-12 col-sm-4" id="contacts">
+                    
                 </div>
                 <div class="col-12 col-sm ml-auto">
                     <p>du lundi &agrave; vendredi 12h-14h et 17h-20h<br/>

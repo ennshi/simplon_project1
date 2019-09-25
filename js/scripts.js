@@ -1,4 +1,39 @@
 $(function(){
+    $.ajax({
+        url:"content.json",
+        dataType: "json",
+    })
+    .done((data) => {
+        
+        let creperie = "";
+        $(data.creperie).each((index, value) => {
+            if(index == 0){
+                creperie += "<p>" + value + "</p>";
+            } else {
+                creperie += "<p class='d-none d-sm-block'>" + value + "</p>";
+            }
+        });
+        $(creperie).appendTo('#creperie_text');
+
+        let chef = "";
+        $(data.chef).each((index, value) => {
+            if(index == 0){
+                chef += "<p>" + value + "</p>";
+            } else {
+                chef += "<p class='d-none d-sm-block'>" + value + "</p>";
+            }
+        });
+        $(chef).appendTo('#chef_text');
+
+        let contacts = "<p>";
+        $.each(data.contact, (key, value) => {
+            contacts += value + "<br>";
+        });
+        contacts += "</p>";
+        $(contacts).appendTo('#contacts');
+
+    });
+
     $(".nav-link").on("click", () => {
         $(".navbar-nav ").find(".active").removeClass("active");
         $(this).addClass("active");

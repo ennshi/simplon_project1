@@ -1,0 +1,15 @@
+{
+    "creperie" : ["Depuis janvier 2012, Marie et Théo Leroy les propriétaires de la crêperie, où vous régale de des nombreuses préparations maisons. Outre les pâtes à crêpes et galettes préparées chaque jour, vous pourrez apprécier la sauce chocolat, le caramel beurre salé, la crème de marron, les confitures, la confiture cheveux d'ange, les tomates séchées marinées, les petites salades et leur vinaigrette au miel et au vinaigre de cidre maison, les madeleines de sarrasin, le thé glacé, les crèmes de fruits pour les kirs, les chutneys et autres préparations du jour.",
+        "Les cidres viennent de deux petits producteurs indépendants. Le miel provient d'un apiculteur de Seine et Marne et les légumes d'un petit primeur indépendant. Chez 'marie et théo', pas de micro ondes, pas de congélateur ni de boîtes de conserve. Du frais, du fait maison, le tout servi avec beaucoup d'amour et de sourires."
+    ],
+    "chef" : [ "Théo Leroy est maître crêpier français, formé en Bretagne. Il s`attache à préparer des plats toujours plus originaux. Chaque semaine, il vous proposons un nouveaux plat que vous pourrez découvrir sur ce site! Et bien sûr, vous pouvez choisir nos recettes traditionnelles, toujours très demandées. Pour en savoir plus sur les plats, consultez les plats à la carte et les menus de la crêperie.",
+        "Côté recettes, Théо n’a pas fini de vous surprendre avec des propositions qui se renouvellent régulièrement. Vous n’imaginerez pas jusqu’à quel point la crêpe et la galette peuvent se décliner… Complète pour les puristes, garnie de poêlée de Saint-Jacques sauce cognac aux amandes pour les palais les plus fins, de la crêpe la plus traditionnelle à la plus exotique ou raffinée, il y en a pour tous les goûts et toutes les envies !"
+    ],
+    "contact" : {
+        "rue" : "151 Place Royale",
+        "ville" : "64000 Pau",
+        "telephone" : "+33 0 00 00 00 00",
+        "email" : "info@marieettheo.fr"
+    }
+    
+}
