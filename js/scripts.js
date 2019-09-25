@@ -5,6 +5,7 @@ $(function(){
         $('.navbar-collapse').collapse('hide');
     });
 
+
     $('#resBtn').click(() => {
         $('#sbmtBtn').addClass('clicked');
     });
@@ -50,4 +51,25 @@ $(function(){
             alert(data);
         });
     });
+
+   
+    const date= { 'date_plats' : $("#date_plats").val(), }; 
+    const showPlats = (date) => {
+        $.ajax({  
+            type: 'POST',  
+            url: '../crepes/php/content_plats.php', 
+            data: date,
+        })
+        .done((data) => {
+            $('#plats_date').html(data); 
+        });
+    };
+
+    showPlats(date);
+
+    $("#date_plats").change(() => { 
+        let date= { 'date_plats' : $("#date_plats").val(), }; 
+        showPlats(date);
+    });
+
 });

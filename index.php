@@ -1,7 +1,9 @@
 <?php 
     require_once 'php/init.php';
     require_once 'php/content_comments.php';
-    require_once 'php/content_plats.php';
+    require_once 'php/content_date.php';
+
+    
 
 ?>
 
@@ -221,7 +223,7 @@
                                 $sqldate = strtotime($date->date);
                                 $realdate = date( 'd-m-Y', $sqldate );
 
-                                echo "<option value='{$realdate}'>{$realdate}</option>";
+                                echo "<option value='{$date->date}'>{$realdate}</option>";
                             } ?>
 
                         </select>
@@ -229,8 +231,9 @@
                 </div>
             </div>
         
-            <div class="row d-flex justify-content-around">
-                <div class="col-10 col-md-6 col-lg-3">
+            <div class="row d-flex justify-content-around" id="plats_date">
+                
+               <!-- <div class="col-10 col-md-6 col-lg-3">
                     <div class="card card-flip">
                         <div class="card-front">
                             <img class="card-img" src="img/salade_2.jpg" alt="Card image cap">
@@ -270,7 +273,7 @@
                         </div>
                     </div>
                     <span class="badge badge-success mt-1"><i class="fa fa-leaf fa-2x"></i></span>
-                </div>
+                </div> -->
             </div>
 
             <div class="row justify-content-center mt-3 mt-md-5">
