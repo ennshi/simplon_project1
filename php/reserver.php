@@ -49,7 +49,8 @@
                 'email' => $email,
                 'phone' => $phone,
                 'adresse' => $adresse,
-                'date' => date('Y-m-d H:i:s')
+                'date' => date('Y-m-d H:i:s'),
+                'done' => 0
             ));
 
             $msg = "Merci, {$prenom}. Nous vous recontacterons!";
