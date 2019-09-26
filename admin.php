@@ -1,7 +1,11 @@
 <?php 
     require_once 'php/init.php';
     require_once 'php/admin_table_content.php';
-    
+
+    if(empty($_SESSION['password'])){
+        
+        header("Location: admin-start.php");
+    }
 
 ?>
 
@@ -21,7 +25,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    
+
+    <style>
+        .btn-light {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
     <title>Admin marie et theo</title>
 </head>
 <body>
@@ -156,7 +166,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan=8><h4>Réservations</h4></th> 
+                    <th colspan=10><h4>Réservations</h4></th> 
                 </tr>
                 <tr>
                     <th scope="col">#</th>
