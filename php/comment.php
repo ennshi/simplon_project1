@@ -22,7 +22,7 @@
                 'name' =>'Le commentaire',
                 'required' => true,
                 'min' => 2,
-                'max' => 120
+                'max' => 300
             )
         ));
         if($validation->passed()) {

@@ -42,9 +42,14 @@ class Validation {
                             }
                             break;
                         case 'numtel':
-                        if(!preg_match('/^0\d{9}$/', $value)) {
-                            $this->addError("{$name_item} ne correspond pas au format 0XXXXXXXXX.");
-                        }
+                            if(!preg_match('/^0\d{9}$/', $value)) {
+                                $this->addError("{$name_item} ne correspond pas au format 0XXXXXXXXX.");
+                            }
+                        break;
+                        case 'boolean':
+                            if($value != 1 && $value != 0) {
+                                $this->addError("{$name_item} doit etre 0 ou 1.");
+                            }
                         break;
                     }
                 }

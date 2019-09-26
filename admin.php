@@ -25,6 +25,76 @@
     <title>Admin marie et theo</title>
 </head>
 <body>
+<div id="resModif" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title ml-auto">Modifier les détails du client id=<span id="numeroCl"></span> </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="prenom" class="col-form-label">Pr&eacute;nom*</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="nom" class="col-form-label">Nom</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="nom" name="nom" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="phone" class="col-form-label">Tel.</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="email" class="col-form-label">Email*</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="email" class="form-control" id="mail" name="mail" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="adresse" class="col-form-label">Adresse</label>
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="adresse" name="adresse" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-4 col-md-3 col-form-label ml-auto">
+                                <label for="done" class="col-form-label">Contacté(0-non/1-oui)</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="number" class="form-control" id="done" name="done" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-2 col-10 offset-md-3 col-md-9 justify-content-center">
+                                <button type="button" class="btn btn-light" id="sbmtBtn">Modifier</button>
+                                <button type="button" class="btn btn-light" id="resCancelBtn" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="comChangeModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-md" role="content">
             <div class="modal-content">
@@ -63,7 +133,7 @@
                                 <label for="accepte" class="col-form-label">Accepté(0-non/1-oui)</label>
                             </div>
                             <div class="col-8">
-                                <input type="email" class="form-control" id="accepte" name="accepte" placeholder="">
+                                <input type="number" class="form-control" id="accepte" name="accepte" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -124,7 +194,7 @@
                                 <td>{$resadresse}</td>
                                 <td>{$resdate}</td>
                                 <td>{$resdone}</td>
-                                <td><input type='button' class='btn btn-light' onclick='openUpdate({$resid}, \"{$resprenom}\", \"{$resnom}\", \"{$resemail}\", \"{$resphone}\", \"{$resadresse}\", \"{$resdate}\", \"{$resdone}\")' value='Modifier'> 
+                                <td><input type='button' class='btn btn-light' onclick='resUpdate({$resid}, \"{$resprenom}\", \"{$resnom}\", \"{$resemail}\", \"{$resphone}\", \"{$resadresse}\", \"{$resdone}\")' value='Modifier'> 
                                 <input type='button' class='btn btn-light' onclick='supprimerData(\"users\", {$resid})' value='Supprimer'></td>
                             </tr>";
                         $i++;
@@ -171,7 +241,7 @@
                                 <td>{$commentaire}</td>
                                 <td>{$date}</td>
                                 <td>{$accepte}</td>
-                                <td><input type='button' class='btn btn-light' onclick='commentUpdate(\"comments\", {$id}, \"{$prenom}\", \"{$email}\", \"{$commentaire}\", \"{$accepte}\")' value='Modifier'> 
+                                <td><input type='button' class='btn btn-light' onclick='commentUpdate({$id}, \"{$prenom}\", \"{$email}\", \"{$commentaire}\", \"{$accepte}\")' value='Modifier'> 
                                 <input type='button' class='btn btn-light' onclick='supprimerData(\"comments\", {$id})' value='Supprimer'></td>
                             </tr>";
                         $i++;
@@ -249,9 +319,8 @@
             }
         }
 
-        function commentUpdate(table, id, prenom, email, commentaire, accepte) {
+        function commentUpdate(id, prenom, email, commentaire, accepte) {
             let num = id;
-            let tableName = table;
 
             $('#numero').html(id);
             $('#prenom_com').val(prenom);
@@ -265,16 +334,55 @@
         		let msg = confirm("Voulez-vous modifier le record id=" + num + "?");
         		if(msg) {
         			let formData = {
-                            'table' : tableName,
         	    			'id' : num,
         		            'prenom' : $('#prenom_com').val(),
-        		            'mail' : $('#mail_com').val(),
+        		            'email' : $('#mail_com').val(),
         		            'comment' : $('#comment').val(),
         		            'accepte' : $('#accepte').val(),
         		        };
         			$.ajax({  
         			    type: 'POST',  
         			    url: 'php/admin/update_comment.php', 
+        			    data: formData
+        			    
+        			})
+        			.done(function(data){
+        				alert(data);
+        				window.location.reload();
+        			});
+        		}
+    		});
+            
+        }
+
+        function resUpdate(id, prenom, nom, email, phone, adresse, done) {
+            let num = id;
+
+            $('#numeroCl').html(id);
+            $('#prenom').val(prenom);
+            $('#nom').val(prenom);
+            $('#mail').val(email);
+            $('#phone').val(phone);
+            $('#adresse').val(adresse);
+            $('#done').val(done);
+
+            $('#resModif').modal('show');
+
+            $('#sbmtBtn').click(function(){
+        		let msg = confirm("Voulez-vous modifier le record id=" + num + "?");
+        		if(msg) {
+        			let formData = {
+        	    			'id' : num,
+        		            'prenom' : $('#prenom').val(),
+                            'nom' : $('#nom').val(),
+        		            'email' : $('#mail').val(),
+                            'phone' : $('#phone').val(),
+        		            'adresse' : $('#adresse').val(),
+        		            'done' : $('#done').val(),
+        		        };
+        			$.ajax({  
+        			    type: 'POST',  
+        			    url: 'php/admin/update_res.php', 
         			    data: formData
         			    
         			})
