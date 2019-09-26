@@ -23,5 +23,10 @@
             $stmt->execute(array_values($fields));
         }
 
+        public function supprimer($table, $field, $value) {
+            $stmt = $this->_conn->conn->prepare("DELETE FROM `{$table}` WHERE `{$field}`=?");
+            $stmt->execute(array($value));
+        }
+
 
     }
